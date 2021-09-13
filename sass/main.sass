@@ -65,6 +65,12 @@ main
                 box-shadow: 2px 2px 2px #ccc
                 outline: 0
 
+                @media (min-width: 40rem)
+                    width: 8rem
+        
+            @media (min-width: 40rem)
+                flex-direction: row
+                
         input, textarea
             font-family: $font
             font-size: 1rem
@@ -82,6 +88,8 @@ main
 
         .item
             margin: 1rem 0
+            padding: 1rem
+            border-bottom: 1px dotted $c3
 
             .item-detail
                 display: flex
@@ -97,6 +105,7 @@ main
                     .item-checkbox
                         align-items: center
                         outline: 0
+                        display: none
 
                     .item-title
                         display: flex
@@ -108,13 +117,16 @@ main
                             margin: 2px
 
                 .item-row2
-                    padding: 0.4rem 1.4rem 0
+                    padding: 0.4rem 0
                     margin: 0
                     color: $c5
 
+        .selected
+            background: lighten($c3, 10%)
+
     .actions
         position: fixed
-        bottom: 4rem
+        bottom: 2rem
         right: 2rem
         display: flex
         flex-direction: column
@@ -130,6 +142,12 @@ main
             box-shadow: 2px 2px 2px #777
             cursor: pointer
 
+        #actions-submenu
+            display: none
+
+        @media (min-height: 50rem)
+            bottom: 4rem
+        
     @media (min-width: 1024px)
         width: 1024px
         margin: 0 auto

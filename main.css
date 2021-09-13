@@ -65,6 +65,16 @@ main .todo-form .todo-form-actions button {
   box-shadow: 2px 2px 2px #ccc;
   outline: 0;
 }
+@media (min-width: 40rem) {
+  main .todo-form .todo-form-actions button {
+    width: 8rem;
+  }
+}
+@media (min-width: 40rem) {
+  main .todo-form .todo-form-actions {
+    flex-direction: row;
+  }
+}
 main .todo-form input, main .todo-form textarea {
   font-family: "Fira Sans", sans-serif;
   font-size: 1rem;
@@ -82,6 +92,8 @@ main .todos {
 }
 main .todos .item {
   margin: 1rem 0;
+  padding: 1rem;
+  border-bottom: 1px dotted #FFAF87;
 }
 main .todos .item .item-detail {
   display: flex;
@@ -97,6 +109,7 @@ main .todos .item .item-detail .item-row1 {
 main .todos .item .item-detail .item-row1 .item-checkbox {
   align-items: center;
   outline: 0;
+  display: none;
 }
 main .todos .item .item-detail .item-row1 .item-title {
   display: flex;
@@ -108,13 +121,16 @@ main .todos .item .item-detail .item-row1 .item-title p {
   margin: 2px;
 }
 main .todos .item .item-detail .item-row2 {
-  padding: 0.4rem 1.4rem 0;
+  padding: 0.4rem 0;
   margin: 0;
   color: #6e7275;
 }
+main .todos .selected {
+  background: #ffd1ba;
+}
 main .actions {
   position: fixed;
-  bottom: 4rem;
+  bottom: 2rem;
   right: 2rem;
   display: flex;
   flex-direction: column;
@@ -129,6 +145,14 @@ main .actions button {
   border-radius: 50%;
   box-shadow: 2px 2px 2px #777;
   cursor: pointer;
+}
+main .actions #actions-submenu {
+  display: none;
+}
+@media (min-height: 50rem) {
+  main .actions {
+    bottom: 4rem;
+  }
 }
 @media (min-width: 1024px) {
   main {
