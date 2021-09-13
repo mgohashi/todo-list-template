@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="./font-awesome-all.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <div class="header-nav__icon">
+                <img src="menu.svg" alt="Menu" class="header-nav-menu">
+                <a href="index.html">My Todo List</a>
+            </div>
+            <div class="header-options">
+                <ul class="header-options-list">
+                    <li class="header-options-list-item">
+                        <a href="index.html">My List</a>
+                    </li>
+                    <li class="header-options-list-item">
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="dropshadow"></div>
+        <div class="menu">
+            <div class="menu-options">
+                <ul class="menu-options-list">
+                    <li class="menu-options-list-item">
+                        <a href="index.html">My List</a>
+                    </li>
+                    <li class="menu-options-list-item">
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="todo-form">
+            <form>
+                <h1 class="todo-form__title">New Todo</h1>
+                <label for="name" class="todo-form__label">Name</label>
+                <input type="text" name="name" id="name" placeholder="Type a short name">
+                <label for="desc" class="todo-form__label">Description</label>
+                <textarea name="desc" id="desc" rows="10" cols="20" placeholder="Type a description"></textarea>
+                <div class="todo-form-actions">
+                    <button id="btn-cancel" type="button">Cancel</button>
+                    <button id="btn-save" type="button">Save</button>
+                </div>
+            </form>
+        </div>
+        <h1 class="page-title">Let's make it today</h1>
+        <ul class="todos">
+            <li class="item">
+                <label for="item-1" class="item-detail">
+                    <div class="item-row1">
+                        <input type="checkbox" name="item" id="item-1" class="item-checkbox">
+                        <div class="item-title">
+                            <p class="item-title__text">My first todo</p>
+                            <p class="item-title__due-date">09.09.2021</p>
+                        </div>
+                    </div>
+                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
+                </label>
+            </li>
+            <li class="item">
+                <label for="item-2" class="item-detail">
+                    <div class="item-row1">
+                        <input type="checkbox" name="item" id="item-2" class="item-checkbox">
+                        <div class="item-title">
+                            <p class="item-title__text">My first todo</p>
+                            <p class="item-title__due-date">09.09.2021</p>
+                        </div>
+                    </div>
+                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
+                </label>
+            </li>
+            <li class="item">
+                <label for="item-3" class="item-detail">
+                    <div class="item-row1">
+                        <input type="checkbox" name="item" id="item-3" class="item-checkbox">
+                        <div class="item-title">
+                            <p class="item-title__text">My first todo</p>
+                            <p class="item-title__due-date">09.09.2021</p>
+                        </div>
+                    </div>
+                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
+                </label>
+            </li>
+            <li class="item">
+                <label for="item-4" class="item-detail">
+                    <div class="item-row1">
+                        <input type="checkbox" name="item" id="item-4" class="item-checkbox">
+                        <div class="item-title">
+                            <p class="item-title__text">My first todo</p>
+                            <p class="item-title__due-date">09.09.2021</p>
+                        </div>
+                    </div>
+                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
+                </label>
+            </li>
+            <li class="item">
+                <label for="item-5" class="item-detail">
+                    <div class="item-row1">
+                        <input type="checkbox" name="item" id="item-5" class="item-checkbox">
+                        <div class="item-title">
+                            <p class="item-title__text">My first todo</p>
+                            <p class="item-title__due-date">09.09.2021</p>
+                        </div>
+                    </div>
+                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
+                </label>
+            </li>
+            <li class="item">
+                <label for="item-6" class="item-detail">
+                    <div class="item-row1">
+                        <input type="checkbox" name="item" id="item-6" class="item-checkbox">
+                        <div class="item-title">
+                            <p class="item-title__text">My first todo</p>
+                            <p class="item-title__due-date">09.09.2021</p>
+                        </div>
+                    </div>
+                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
+                </label>
+            </li>
+            <li class="item">
+                <label for="item-7" class="item-detail">
+                    <div class="item-row1">
+                        <input type="checkbox" name="item" id="item-7" class="item-checkbox">
+                        <div class="item-title">
+                            <p class="item-title__text">My first todo</p>
+                            <p class="item-title__due-date">09.09.2021</p>
+                        </div>
+                    </div>
+                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
+                </label>
+            </li>
+        </ul>
+        <div class="actions">
+            <button id="actions-add"><i class="fas fa-plus"></i></button>
+            <button id="actions-submenu"><i class="fas fa-ellipsis-v"></i></button>
+        </div>
+    </main>
+    <footer>
+        <ul class="main-footer-items">
+            <li class="main-footer-items__item">
+                Copyright 2021
+            </li>
+        </ul>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

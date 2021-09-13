@@ -1,0 +1,50 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .about-office {
+  background: no-repeat center/cover url("office.jpg");
+  background-position: bottom left;
+  width: 100%;
+  height: 30vh;
+}
+@media (min-width: 40rem) {
+  main .about-office {
+    display: inline-block;
+    height: 50vh;
+  }
+}
+@media (min-width: 1024px) {
+  main .about-office {
+    max-width: 1024px;
+    box-shadow: 6px 6px 6px #ccc;
+  }
+}
+main .page-title {
+  color: #13293D;
+  font-size: 1.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #c7dbee;
+}
+main .about-details {
+  margin: 2rem 2rem;
+  display: inline-block;
+}
+main .about-details .about-description {
+  margin: 2rem 0;
+}
+@media (min-width: 40rem) {
+  main .about-details .about-description {
+    margin: 0;
+    display: inline-block;
+  }
+}
+@media (min-width: 40rem) {
+  main .about-details {
+    margin: 0 auto;
+    max-width: 60vw;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

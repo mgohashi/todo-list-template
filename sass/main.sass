@@ -1,0 +1,136 @@
+@import "common.sass"    
+
+main
+    display: flex
+    flex-direction: column
+    justify-content: start
+    align-items: center
+    margin: 0 2rem
+
+    .page-title
+        color: $c2
+        font-size: 1.5rem
+        padding-bottom: 0.4rem
+        border-bottom: 1px solid lighten($c2, 70%)
+        width: 82vw
+        max-width: 38rem
+    
+    .todo-form
+        position: absolute
+        margin: auto
+        min-width: 20rem
+        width: 80vw
+        max-width: 40rem
+        border-radius: 6px
+        padding: 1rem 1.5rem
+        background: $c4
+        color: $c2
+        box-shadow: 4px 4px 4px #555
+        display: none
+        z-index: 2
+        max-height: 90vh
+        overflow: auto
+
+        @media (max-height: 600px)
+            top: 20px
+
+        h1
+            font-size: 1.2rem
+            padding-bottom: 0.4rem
+            border-bottom: 1px solid lighten($c2, 70%)
+
+        .todo-form__label
+            display: block
+            margin: 0.5rem 0
+        
+        .todo-form-actions
+            margin-top: 1rem
+            display: flex
+            flex-direction: column
+            flex-flow: column-reverse
+            justify-content: space-between
+
+            #btn-cancel
+                background: $c3
+                color: $c2
+
+            button
+                background: $c1
+                color: $c4
+                width: 100%
+                padding: 10px
+                margin-bottom: 1rem
+                border: 0
+                border-radius: 6px 6px 6px
+                box-shadow: 2px 2px 2px #ccc
+                outline: 0
+
+        input, textarea
+            font-family: $font
+            font-size: 1rem
+            display: block
+            width: 100%
+            padding: 10px
+            border: 0
+            border-radius: 10px
+            outline: 0
+
+    .todos
+        list-style: none
+        margin: 0
+        padding: 0
+
+        .item
+            margin: 1rem 0
+
+            .item-detail
+                display: flex
+                flex-direction: column
+                height: auto
+                cursor: pointer
+
+                .item-row1
+                    display: flex
+                    align-items: center
+                    height: 100%
+
+                    .item-checkbox
+                        align-items: center
+                        outline: 0
+
+                    .item-title
+                        display: flex
+                        justify-content: space-between
+                        width: 100%
+                        font-size: 1.1rem
+
+                        p 
+                            margin: 2px
+
+                .item-row2
+                    padding: 0.4rem 1.4rem 0
+                    margin: 0
+                    color: $c5
+
+    .actions
+        position: fixed
+        bottom: 4rem
+        right: 2rem
+        display: flex
+        flex-direction: column
+        row-gap: 1rem
+
+        button
+            color: $c4
+            background: $c1
+            width: 3rem
+            height: 3rem
+            border: 0
+            border-radius: 50%
+            box-shadow: 2px 2px 2px #777
+            cursor: pointer
+
+    @media (min-width: 1024px)
+        width: 1024px
+        margin: 0 auto
+        

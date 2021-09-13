@@ -1,0 +1,143 @@
+@import "common.sass"
+@import url('font-awesome-all.css')
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;600&display=swap')
+
+* 
+    box-sizing: border-box
+
+html
+    height: 100%
+
+body
+    font-family: $font
+    height: 100%
+    margin: 0
+    display: grid
+    grid-template-rows: 5rem auto fit-content(8rem)
+    grid-template-areas: "." "main" "footer"
+
+header
+    top: 0
+    left: 0
+    position: fixed
+    width: 100vw
+    background: $c1
+    color: $c4
+    
+    .header-nav
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 4rem
+        padding: 1rem
+        box-shadow: 6px 6px 6px #ccc
+
+        .header-nav__icon
+            display: flex
+            flex-direction: row
+            align-items: center
+            column-gap: 20px
+
+            .header-nav-menu
+                height: 2rem
+
+                @media (min-width: 40rem)
+                    display: none
+
+        a
+            display: block
+            color: $c4
+            text-decoration: none
+            font-weight: bold
+            font-size: 1.2rem
+            height: 1.6rem
+            outline: 0
+
+        .header-options
+            display: none
+
+            @media (min-width: 40rem) 
+                display: block
+
+        .header-options-list
+            display: flex
+            list-style: none
+            padding: 0
+            margin: 0
+
+            .header-options-list-item
+                margin: 0 1rem
+                padding: 3px
+                
+                a:hover, a:active
+                    border-bottom: 5px solid $c4
+                    outline: 0
+
+main
+    grid-area: main
+    align-content: top
+
+    .dropshadow
+        position: fixed
+        top: 0
+        left: 0
+        background: #4d4d4d98
+        width: 100vw
+        height: 100vh
+        z-index: 1
+        display: none
+    
+    .menu
+        position: fixed
+        top: 0
+        left: 0
+        width: 80vw
+        height: 100vh
+        margin: auto
+        display: flex
+        z-index: 2
+        display: none
+        box-shadow: 6px 6px 6px #555
+
+        .menu-options
+            background: $c4
+            width: 100%
+
+            .menu-options-list
+                list-style: none
+                margin: auto
+                padding: 0
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                height: 100vh
+
+                .menu-options-list-item
+                    font-size: 1.5rem
+                    font-weight: bold
+                    margin: 1rem
+
+                    a
+                        text-decoration: none
+                        color: $c1
+                        outline: 0
+
+footer
+    grid-area: footer
+    display: flex
+    justify-content: center
+    align-items: stretch
+    background: $cf
+    height: 3rem
+    
+    .main-footer-items
+        padding: 0
+        display: flex
+        font-size: 1rem
+        color: $c4
+
+        .main-footer-items__item
+            list-style: none
+
+    
