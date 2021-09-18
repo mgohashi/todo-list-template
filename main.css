@@ -3,162 +3,71 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  margin: 0 2rem;
-}
-main .page-title {
-  color: #13293D;
-  font-size: 1.5rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid #c7dbee;
-  width: 82vw;
-  max-width: 38rem;
-}
-main .todo-form {
-  position: absolute;
-  margin: auto;
-  min-width: 20rem;
-  width: 80vw;
-  max-width: 40rem;
-  border-radius: 6px;
-  padding: 1rem 1.5rem;
-  background: #EEF0F2;
-  color: #13293D;
-  box-shadow: 4px 4px 4px #555;
-  display: none;
-  z-index: 2;
-  max-height: 90vh;
-  overflow: auto;
-}
-@media (max-height: 600px) {
-  main .todo-form {
-    top: 20px;
-  }
-}
-main .todo-form h1 {
-  font-size: 1.2rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid #c7dbee;
-}
-main .todo-form .todo-form__label {
-  display: block;
-  margin: 0.5rem 0;
-}
-main .todo-form .todo-form-actions {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  flex-flow: column-reverse;
-  justify-content: space-between;
-}
-main .todo-form .todo-form-actions #btn-cancel {
-  background: #FFAF87;
-  color: #13293D;
-}
-main .todo-form .todo-form-actions button {
-  background: #0D7E83;
-  color: #EEF0F2;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 1rem;
-  border: 0;
-  border-radius: 6px 6px 6px;
-  box-shadow: 2px 2px 2px #ccc;
-  outline: 0;
-}
-@media (min-width: 40rem) {
-  main .todo-form .todo-form-actions button {
-    width: 8rem;
-  }
-}
-@media (min-width: 40rem) {
-  main .todo-form .todo-form-actions {
-    flex-direction: row;
-  }
-}
-main .todo-form input, main .todo-form textarea {
-  font-family: "Fira Sans", sans-serif;
-  font-size: 1rem;
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 0;
-  border-radius: 10px;
-  outline: 0;
-}
-main .todos {
-  list-style: none;
-  margin: 0;
+  max-width: 50rem;
+  margin: 0 auto;
   padding: 0;
-}
-main .todos .item {
-  margin: 1rem 0;
-  padding: 1rem;
-  border-bottom: 1px dotted #FFAF87;
-}
-main .todos .item .item-detail {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  cursor: pointer;
-}
-main .todos .item .item-detail .item-row1 {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-main .todos .item .item-detail .item-row1 .item-checkbox {
-  align-items: center;
-  outline: 0;
-  display: none;
-}
-main .todos .item .item-detail .item-row1 .item-title {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 1.1rem;
-}
-main .todos .item .item-detail .item-row1 .item-title p {
-  margin: 2px;
-}
-main .todos .item .item-detail .item-row2 {
-  padding: 0.4rem 0;
-  margin: 0;
-  color: #6e7275;
-}
-main .todos .selected {
-  background: #ffd1ba;
-}
-main .actions {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-}
-main .actions button {
-  color: #EEF0F2;
-  background: #0D7E83;
-  width: 3rem;
-  height: 3rem;
-  border: 0;
-  border-radius: 50%;
-  box-shadow: 2px 2px 2px #777;
-  cursor: pointer;
-}
-main .actions #actions-submenu {
-  display: none;
-}
-@media (min-height: 50rem) {
-  main .actions {
-    bottom: 4rem;
-  }
 }
 @media (min-width: 1024px) {
   main {
     width: 1024px;
     margin: 0 auto;
   }
+}
+main .page-title {
+  color: #13293D;
+  font-size: 1.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dotted #ccc;
+  width: 100%;
+  padding: 0 1rem;
+  max-width: 50rem;
+}
+main .login-form {
+  min-width: 20rem;
+  width: 90vw;
+  margin-top: 1vh;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #eee;
+  box-shadow: 4px 4px 4px #ccc;
+  max-width: 20rem;
+}
+@media (max-height: 600px) {
+  main .login-form {
+    top: 20px;
+  }
+}
+main .login-form h1 {
+  font-size: 1.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #c7dbee;
+}
+main .login-form label {
+  font-weight: bold;
+}
+main .login-form input {
+  font-family: "Fira Sans", sans-serif;
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 2px solid #cccccc00;
+  border-radius: 6px;
+  outline: 0;
+}
+main .login-form input:focus {
+  border: 2px solid #FFAF87;
+}
+main .login-form button {
+  font-weight: bold;
+  background: #FFAF87;
+  color: #444;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-radius: 6px 6px 6px;
+  outline: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

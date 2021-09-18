@@ -19,9 +19,6 @@
             <div class="header-options">
                 <ul class="header-options-list">
                     <li class="header-options-list-item">
-                        <a href="index.html">My List</a>
-                    </li>
-                    <li class="header-options-list-item">
                         <a href="about.html">About</a>
                     </li>
                 </ul>
@@ -34,7 +31,10 @@
             <div class="menu-options">
                 <ul class="menu-options-list">
                     <li class="menu-options-list-item">
-                        <a href="index.html">My List</a>
+                        <a href="index.html">Login</a>
+                    </li>
+                    <li class="menu-options-list-item">
+                        <a href="todo-list.html">My List</a>
                     </li>
                     <li class="menu-options-list-item">
                         <a href="about.html">About</a>
@@ -42,109 +42,18 @@
                 </ul>
             </div>
         </div>
-        <div class="todo-form">
+        <div class="login-form">
             <form>
-                <h1 class="todo-form__title">New Todo</h1>
-                <label for="name" class="todo-form__label">Name</label>
-                <input type="text" name="name" id="name" placeholder="Type a short name">
-                <label for="desc" class="todo-form__label">Description</label>
-                <textarea name="desc" id="desc" rows="10" cols="20" placeholder="Type a description"></textarea>
-                <div class="todo-form-actions">
-                    <button id="btn-cancel" type="button">Cancel</button>
-                    <button id="btn-save" type="button">Save</button>
+                <h1 class="login-form__title">Sign In</h1>
+                <label for="username" class="login-form__label">Username</label>
+                <input type="text" name="username" id="username" placeholder="Login">
+                <label for="password" class="login-form__label">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password">
+                <div class="login-form-actions">
+                    <button id="btn-login" type="button"
+                    onclick="login()">Login</button>
                 </div>
             </form>
-        </div>
-        <h1 class="page-title">Let's make it today</h1>
-        <ul class="todos">
-            <li class="item"">
-                <label for="item-1" class="item-detail">
-                    <div class="item-row1">
-                        <input type="checkbox" name="item" id="item-1" class="item-checkbox">
-                        <div class="item-title">
-                            <p class="item-title__text">My first todo</p>
-                            <p class="item-title__due-date">09.09.2021</p>
-                        </div>
-                    </div>
-                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
-                </label>
-            </li>
-            <li class="item">
-                <label for="item-2" class="item-detail">
-                    <div class="item-row1">
-                        <input type="checkbox" name="item" id="item-2" class="item-checkbox" onclick="select(this)">
-                        <div class="item-title">
-                            <p class="item-title__text">My first todo</p>
-                            <p class="item-title__due-date">09.09.2021</p>
-                        </div>
-                    </div>
-                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
-                </label>
-            </li>
-            <li class="item">
-                <label for="item-3" class="item-detail">
-                    <div class="item-row1">
-                        <input type="checkbox" name="item" id="item-3" class="item-checkbox" onclick="select(this);">
-                        <div class="item-title">
-                            <p class="item-title__text">My first todo</p>
-                            <p class="item-title__due-date">09.09.2021</p>
-                        </div>
-                    </div>
-                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
-                </label>
-            </li>
-            <li class="item">
-                <label for="item-4" class="item-detail">
-                    <div class="item-row1">
-                        <input type="checkbox" name="item" id="item-4" class="item-checkbox" onclick="select(this)">
-                        <div class="item-title">
-                            <p class="item-title__text">My first todo</p>
-                            <p class="item-title__due-date">09.09.2021</p>
-                        </div>
-                    </div>
-                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
-                </label>
-            </li>
-            <li class="item">
-                <label for="item-5" class="item-detail">
-                    <div class="item-row1">
-                        <input type="checkbox" name="item" id="item-5" class="item-checkbox" onclick="select(this)">
-                        <div class="item-title">
-                            <p class="item-title__text">My first todo</p>
-                            <p class="item-title__due-date">09.09.2021</p>
-                        </div>
-                    </div>
-                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
-                </label>
-            </li>
-            <li class="item">
-                <label for="item-6" class="item-detail">
-                    <div class="item-row1">
-                        <input type="checkbox" name="item" id="item-6" class="item-checkbox" onclick="select(this)">
-                        <div class="item-title">
-                            <p class="item-title__text">My first todo</p>
-                            <p class="item-title__due-date">09.09.2021</p>
-                        </div>
-                    </div>
-                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
-                </label>
-            </li>
-            <li class="item">
-                <label for="item-7" class="item-detail">
-                    <div class="item-row1">
-                        <input type="checkbox" name="item" id="item-7" class="item-checkbox" onclick="select(this)">
-                        <div class="item-title">
-                            <p class="item-title__text">My first todo</p>
-                            <p class="item-title__due-date">09.09.2021</p>
-                        </div>
-                    </div>
-                    <p class="item-row2">I need to build a new app.I need to build a new app.I need to build a new app</p>
-                </label>
-            </li>
-        </ul>
-        <div class="actions">
-            <button id="actions-add"><i class="fas fa-plus"></i></button>
-            <button id="actions-submenu"><i class="fas fa-ellipsis-v"></i></button>
         </div>
     </main>
     <footer>

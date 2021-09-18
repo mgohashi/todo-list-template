@@ -11,19 +11,32 @@ let actionsSubmenuButton = document.querySelector("#actions-submenu");
 function openMenu() {
     menu.style.display = 'block';
     dropshadow.style.display = 'block';
+    setTimeout(() => {
+        menu.classList.add('open');
+        dropshadow.classList.add('open');
+    }, 100);
 }
 
 function openModal() {
-    if (todoForm)
-        todoForm.style.display = 'block';
     dropshadow.style.display = 'block';
+    todoForm.style.display = 'block';
+    setTimeout(() => {
+        dropshadow.classList.add('open');
+        todoForm.classList.add('open');
+    }, 100);
 }
 
 function close(event) {
+    menu.classList.remove('open');
     if (todoForm)
-        todoForm.style.display = 'none';
-    dropshadow.style.display = 'none';
-    menu.style.display = 'none';
+        todoForm.classList.remove('open');
+    dropshadow.classList.remove('open');
+    setTimeout(() => {
+        dropshadow.style.display = 'none';
+        menu.style.display = 'none';
+        if (todoForm)
+            todoForm.style.display = 'none';
+    }, 300);
 }
 
 if (dropshadow) {
@@ -78,3 +91,6 @@ for (var i=0; i < checkboxList.length ; i++) {
     });
 }
 
+function login() {
+    window.location.replace('/todo-list.html');
+}

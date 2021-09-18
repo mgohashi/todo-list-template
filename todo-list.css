@@ -1,0 +1,229 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0;
+}
+@media (min-width: 40rem) {
+  main {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+main .page-title {
+  color: #13293D;
+  font-size: 1.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dotted #ccc;
+  width: 100%;
+  padding: 0 1rem;
+  max-width: 50rem;
+}
+main .todo-form {
+  display: none;
+  position: absolute;
+  margin: auto;
+  min-width: 20rem;
+  width: 90vw;
+  max-width: 40rem;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  background: #EEF0F2;
+  color: #13293D;
+  box-shadow: 4px 4px 4px #555;
+  display: none;
+  z-index: 2;
+  max-height: 90vh;
+  overflow: auto;
+  transform: translateY(120vh);
+  transition: transform 100ms ease-out;
+}
+@media (max-height: 600px) {
+  main .todo-form {
+    top: 20px;
+  }
+}
+main .todo-form h1 {
+  font-size: 1.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #c7dbee;
+}
+main .todo-form .todo-form__label {
+  display: block;
+  margin: 0.5rem 0;
+}
+main .todo-form .todo-form-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+  justify-content: space-between;
+}
+main .todo-form .todo-form-actions #btn-cancel {
+  background: #0D7E83;
+  color: #EEF0F2;
+}
+main .todo-form .todo-form-actions button {
+  font-weight: bold;
+  background: #FFAF87;
+  color: #444;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 0;
+  border-radius: 6px 6px 6px;
+  outline: 0;
+}
+@media (min-width: 40rem) {
+  main .todo-form .todo-form-actions button {
+    width: 8rem;
+  }
+}
+@media (min-width: 40rem) {
+  main .todo-form .todo-form-actions {
+    flex-direction: row;
+  }
+}
+main .todo-form input, main .todo-form textarea {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #cccccc00;
+  border-radius: 6px;
+  outline: 0;
+}
+main .todo-form input:focus, main .todo-form textarea:focus {
+  border: 2px solid #FFAF87;
+}
+main .todo-form textarea {
+  height: 14rem;
+}
+@media (orientation: landscape) and (max-width: 45rem) {
+  main .todo-form textarea {
+    height: 5rem;
+  }
+}
+main .open {
+  transform: translateY(0);
+}
+main .todos-filter {
+  width: 100%;
+  margin: 0 2rem;
+  padding: 1rem;
+  padding-top: 0;
+}
+main .todos-filter .todos-filter-text {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: 0;
+}
+main .todos {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 50rem;
+}
+main .todos .item {
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #EEF0F2;
+}
+main .todos .item .item-detail {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  cursor: pointer;
+}
+main .todos .item .item-detail .item-row1 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+main .todos .item .item-detail .item-row1 .item-checkbox {
+  outline: 0;
+}
+main .todos .item .item-detail .item-row1 .item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0 0.3rem;
+}
+main .todos .item .item-detail .item-row1 .item-title .item-status {
+  display: flex;
+  align-items: center;
+}
+main .todos .item .item-detail .item-row1 .item-title .item-status .item-title__text {
+  margin-right: 5px;
+}
+main .todos .item .item-detail .item-row1 .item-title .item-status .item-title__status {
+  display: inline-block;
+  background: #ed4f00;
+  padding: 0.3rem 0.3rem;
+  border-radius: 6px;
+  color: #EEF0F2;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+main .todos .item .item-detail .item-row2 {
+  padding: 0.4rem 1.6rem;
+  margin: 0;
+  color: #6e7275;
+}
+main .todos .item .item-detail .item-labels {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  padding: 0 1.6rem;
+}
+main .todos .item .item-detail .item-labels .item-label {
+  display: inline-block;
+  background: #0D7E83;
+  padding: 0.3rem 0.3rem;
+  border-radius: 6px;
+  color: #EEF0F2;
+  font-size: 0.4rem;
+  font-weight: bold;
+  margin: 0.2rem 0.2rem 0 0;
+}
+main .todos .selected {
+  background: #ffd1ba;
+}
+main .actions {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+main .actions button {
+  color: #EEF0F2;
+  background: #0D7E83;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px #999;
+  cursor: pointer;
+}
+main .actions #actions-submenu {
+  display: none;
+}
+@media (min-height: 50rem) {
+  main .actions {
+    bottom: 4rem;
+  }
+}
+
+/*# sourceMappingURL=todo-list.css.map */
